@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coletor Digital | MGITECH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="header">
+        <img src="logo-mgi.svg" alt="Logo MGI Soluções">
+        <div class="status-tag" style="font-size: 14px; color: white; font-weight: bold;">OSCAR CALÇADOS</div>
+        <div class="status-subtag" style="font-size: 12px; color: white; margin-top: 5px;">SISTEMA DE COLETA DE DADOS</div>
+    </div>
+
+    <div id="step1" class="step active">
+        <button class="btn" onclick="nextStep(2)">Iniciar Escaneamento</button>
+    </div>
+
+    <div id="step2" class="step">
+        <h3>Seleção da Loja</h3>
+        <p>Informe o número da unidade:</p>
+        <input type="number" id="lojaInput" placeholder="Ex: 001" min="1" max="999">
+        <button class="btn" onclick="confirmarLoja()">Confirmar</button>
+    </div>
+
+    <div id="step3" class="step">
+        <div class="info-bar">LOJA: <span id="displayLoja">---</span></div>
+        <textarea id="scannerArea" placeholder="Escaneie os códigos aqui..."></textarea>
+        <div class="counter">Linhas lidas: <span id="lineCount">0</span></div>
+        <button class="btn btn-success" onclick="finalizarEscaneamento()">Finalizar e Gerar Arquivo</button>
+    </div>
+
+    <div id="step4" class="step">
+        <h3>Coleta Finalizada!</h3>
+        
+        <div class="download-container">
+            <p class="download-status">
+                Seu arquivo está sendo baixado<br>
+                <strong>automaticamente...</strong>
+            </p>
+            
+            <div class="loader"></div>
+
+            <p class="download-fallback">
+                Se o download não iniciar em alguns segundos,<br>
+                <a href="#" id="btnDownload" class="download-link">clique aqui para iniciar o download</a>.
+            </p>
+        </div>
+
+        <button class="btn" onclick="location.reload()" style="background:#6c757d; margin-top: 20px;">Nova Coleta</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

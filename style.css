@@ -1,0 +1,178 @@
+:root {
+    --mgi-blue: #002E6D;
+    --mgi-dark: #002856;
+    --mgi-light-blue: #6BC4E8;
+    --white: #F5F1EB;
+    --success: #28a745;
+}
+
+body {
+    background-image: url('Tecnologia MGI Soluções.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--mgi-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.app-container {
+    background: rgba(0, 46, 109, 0.85); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+    width: 90%;
+    max-width: 500px;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+.header { 
+    margin-bottom: 25px; 
+}
+
+/* Ajuste para alinhar as tags de texto abaixo da logo se necessário */
+.status-tag {
+    margin-top: 10px;
+}
+
+.status-subtag {
+    letter-spacing: 1px;
+}
+
+/* Estados e Alternância de Telas */
+.step { 
+    display: none; 
+}
+
+.step.active { 
+    display: block; 
+}
+
+h3 {
+    margin-top: 0;
+    color: var(--white);
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.9); 
+    color: #333;
+}
+
+textarea {
+    height: 150px; 
+    font-family: monospace;
+    resize: none;
+}
+
+.btn {
+    background: var(--mgi-dark); 
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover { 
+    background: var(--mgi-light-blue); 
+    color: var(--mgi-dark);
+}
+
+.btn-success { 
+    background: var(--success); 
+    color: white;
+}
+
+.btn-success:hover { 
+    background: #218838; 
+    color: white;
+}
+
+.info-bar {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.counter { 
+    font-size: 12px; 
+    color: var(--mgi-light-blue); 
+    margin-top: 5px; 
+}
+
+/* --- NOVAS IMPLEMENTAÇÕES DA TELA DE DOWNLOAD --- */
+
+.download-container {
+    padding: 20px 10px;
+}
+
+.download-status {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: var(--white);
+    line-height: 1.4;
+}
+
+.download-fallback {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    line-height: 1.5;
+}
+
+.download-link {
+    color: var(--mgi-light-blue);
+    text-decoration: underline;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.download-link:hover {
+    color: #fff;
+}
+
+/* Elemento visual do Spinner (Círculo Giratório) */
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: var(--mgi-light-blue);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
